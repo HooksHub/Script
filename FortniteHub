@@ -1,0 +1,31 @@
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+	if key == "b" then
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Hooks's Fortnite Hub", "Ocean")
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Inf Yield Stuff")
+MainSection:NewSlider("Jump", "You Can Jump As High As You Want", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+MainSection:NewButton("Inf Yield", "Admin Commands", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+MainSection:NewButton("Inf Jump", "Makes You Infinitely Jump", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Wb4538e6"))();
+end)
+MainSection:NewButton("Reset WS / JP", "Resets Your Jumppower To Default", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+MainSection:NewButton("Rejoin", "Makes You Rejoin The Game", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+end)
+local Main = Window:NewTab("Aim")
+local MainSection = Main:NewSection("Aimlocks")
+MainSection:NewButton("Universal Lock", "Universal Silent Aim", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+ end
+end)
